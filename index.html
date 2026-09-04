@@ -1,29 +1,163 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Thea's Hangout</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thea's Hangout</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style> html { scroll-behavior: smooth; } </style>
 </head>
-<body class="bg-slate-800 text-slate-100">
-  <main class="max-w-4xl mx-auto p-6 space-y-6">
-    <h1 class="text-4xl font-bold mb-4">Thea's Hangout</h1>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
 
-    <div class="bg-slate-100 text-slate-800 rounded-xl shadow-lg w-full align-top p-6">
-      <h2 class="text-2xl font-semibold mb-4">Bello!</h2>
-      Welcome to my website :) Currently a bit empty right now hey...
+  <!-- Header / Nav -->
+  <header class="bg-white border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="font-semibold text-gray-900">Thea's Hangout</a>
+      <nav class="space-x-6 text-sm">
+        <a href="#about" class="hover:text-gray-950">About</a>
+        <a href="#education" class="hover:text-gray-950">Education</a>
+        <a href="#research" class="hover:text-gray-950">Research Themes</a>
+        <a href="#outputs" class="hover:text-gray-950">Research Outputs</a>
+        <a href="#cv" class="hover:text-gray-950">CV</a>
+        <a href="#contact" class="hover:text-gray-950">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="bg-slate-100 text-slate-800 rounded-xl shadow-lg w-full align-top p-6">
-      <h2 class="text-2xl font-semibold mb-4">What is this webpage?</h2>
-      I'm trying to use my fullstack web dev skills to make this a portfolio of sorts, and include all sorts of info about myself. I've kinda forgotten everything though so uhm
+  <!-- Hero -->
+  <section class="max-w-3xl mx-auto px-4 py-12">
+    <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+      <img src="https://via.placeholder.com/140" alt="Profile photo" class="w-32 h-32 rounded-full object-cover">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-900">Thea Sotthivej</h1>
+        <p class="text-gray-600 mt-1">PhD Student, Cancer Sciences, University of Glasgow</p>
+        <p class="text-gray-500 text-sm mt-1">wsotthivej@gmail.com &middot; Glasgow, Scotland</p>
+      </div>
     </div>
+  </section>
 
-    <div class="bg-slate-100 text-slate-800 rounded-xl shadow-lg w-full align-top p-6">
-      <h2 class="text-2xl font-semibold mb-4">Who are you?</h2>
-      Wait how did you even get here then what
-    </div>
+  <!-- About -->
+  <section id="about" class="max-w-3xl mx-auto px-4 py-8 border-t border-gray-200">
+    <h2 class="text-lg font-semibold text-gray-900 mb-3">About</h2>
+    <p class="text-gray-700">
+      I am a PhD student at the University of Glasgow (funded by/based at the Cancer Research UK Scotland Institute), working on the mapping and modelling of cancer cell heterogeneity in pancreatic ductal adenocarcinoma (PDAC). Before starting my PhD, I completed
+      an MRes in Bioinformatics and Theoretical Systems Biology at Imperial College London, where I worked on 
+      <a href="https://www.science.org/doi/10.1126/science.aah6266" class="text-gray-900 underline" target="_blank" rel="noopener noreferrer">phylodynamic</a>
+      inference of phenotypic switching parameters in neuroblastoma. I am interested in how mathematical modelling of cancer cells can give us a mechanistic understanding of the development of treatment resistance, and ultimately translate into better patient outcomes. Outside of research, I enjoy
+      learning languages, cooking, and competing in sabre fencing (or used to).
+    </p>
+  </section>
 
-  </main>
+  <!-- Education -->
+  <section id="education" class="max-w-3xl mx-auto px-4 py-8 border-t border-gray-200">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">Education</h2>
+    <ul class="space-y-4">
+      <li class="flex justify-between gap-4">
+        <div>
+          <p class="font-medium text-gray-900">PhD in Cancer Sciences</p>
+          <p class="text-gray-600 text-sm">University of Glasgow (CRUK Scotland Institute)</p>
+        </div>
+        <p class="text-gray-500 text-sm whitespace-nowrap">2026 – present</p>
+      </li>
+      <li class="flex justify-between gap-4">
+        <div>
+          <p class="font-medium text-gray-900">MRes in Bioinformatics and Theoretical Systems Biology]</p>
+          <p class="text-gray-600 text-sm">Imperial College London, Department of Life Sciences</p>
+        </div>
+        <p class="text-gray-500 text-sm whitespace-nowrap">2025 – 2026</p>
+      </li>
+      <li class="flex justify-between gap-4">
+        <div>
+          <p class="font-medium text-gray-900">BSc in Mathematics with Applied Mathematics/Mathematical Physics</p>
+          <p class="text-gray-600 text-sm">Imperial College London, Department of Mathematics</p>
+        </div>
+        <p class="text-gray-500 text-sm whitespace-nowrap">2022 – 2025</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="max-w-3xl mx-auto px-4 py-8 border-t border-gray-200">
+    <h2 class="text-lg font-semibold text-gray-900 mb-3">Research</h2>
+    <p class="text-gray-700">
+      **Mathematically**, I am interested in using Bayesian methods for parameter inference in stochastic models. 
+       In particular, I have been using a lot of
+      <a href="https://en.wikipedia.org/wiki/Approximate_Bayesian_computation" class="text-gray-900 underline" target="_blank" rel="noopener noreferrer">Approximate Bayesian Computation (ABC)</a>,
+      although I also have experience in
+      <a href="https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo" class="text-gray-900 underline" target="_blank" rel="noopener noreferrer">Markov chain Monte Carlo (MCMC)</a>
+      methods through my undergraduate degree.
+      For my PhD, I am picking up more experience in Partial Differential Equations (PDEs) and Agent-Based Modelling (ABM).
+
+      **Biologically**, I am interested in understanding how the heterogeneity of cancer cells leads to the development of treatment resistance.
+      In particular, the idea of <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3728826/" class="text-gray-900 underline" target="_blank" rel="noopener noreferrer">adaptive therapy</a>
+      was introduced to me by my Master's thesis co-supervisor (<a href="https://scholar.google.com/citations?user=Rab_6LcAAAAJ" class="text-gray-900 underline" target="_blank" rel="noopener noreferrer">Maxi Strobl</a>),
+      which was influential in shaping my thinking and research interests. 
+      
+      My **Master's thesis** was on neuroblastoma, which can be separated into two cell phenotypes with different susceptibilities to treatment. Cells can interconvert between these two states,
+      (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12360622/" class="text-gray-900 underline" target="_blank" rel="noopener noreferrer">'phenotypic plasticity'</a>), and it is easy to imagine how this
+      could lead to the development of treatment resistance. Being able to quantify the rates of switching would thus be useful in testing our hypotheses regarding plasticity, and as such my thesis
+      focused on developing an inference framework to be able to recover phenotypic switching rates from cell counts and single-cell phylogenies.
+
+      My interest in parameter inference from experimental data has continued into my **PhD** work. Although I am now working with pancreatic ductal adenocarcinoma (PDAC), the idea remains the same.
+      The heterogeneity in cancer cells, and how the cell states change over time, shapes how treatment resistance develops, and so I would like to understand and quantify the cellular dynamics.
+    </p>
+  </section>
+
+  <!-- Research outputs -->
+  <section id="outputs" class="max-w-3xl mx-auto px-4 py-8 border-t border-gray-200">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">Research Outputs</h2>
+    <ul class="space-y-3 text-gray-700 text-sm">
+      <li>
+        "Plasticity, phenotypes, and phylogenies: when are counts not enough?" 
+        3rd London Mathematical Biology Conference, London, 2026.
+        <span class="text-gray-500">(Poster)</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CV / Experience -->
+  <section id="cv" class="max-w-3xl mx-auto px-4 py-8 border-t border-gray-200">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">CV</h2>
+
+    <h3 class="font-medium text-gray-900 mb-2">Academia</h3>
+    <ul class="space-y-4 mb-6">
+      <li class="flex justify-between gap-4">
+        <div>
+          <p class="font-medium text-gray-900">PhD Student (<a href="https://www.crukscotlandinstitute.ac.uk/cruk-si-research/cruk-si-research-groups/xiao-fu.html" class="text-gray-900 underline" target="_blank" rel="noopener noreferrer">Integrative Modelling group</a>)</p>
+          <p class="text-gray-600 text-sm">Cancer Research UK Scotland Institute</p>
+        </div>
+        <p class="text-gray-500 text-sm whitespace-nowrap">2026 - Present</p>
+      </li>
+    </ul>
+
+    <h3 class="font-medium text-gray-900 mb-2">Industry</h3>
+    <ul class="space-y-4 mb-6">
+      <li class="flex justify-between gap-4">
+        <div>
+          <p class="font-medium text-gray-900">Software Developer Intern</p>
+          <p class="text-gray-600 text-sm">Softwire</p>
+        </div>
+        <p class="text-gray-500 text-sm whitespace-nowrap">2025</p>
+      </li>
+    </ul>
+
+    <h3 class="font-medium text-gray-900 mb-2">Skills</h3>
+    <p class="text-gray-700 text-sm mb-6">**Languages (by level of fluency)**: English, Thai, French (A2/B1 - check back next year!)</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-3xl mx-auto px-4 py-8 border-t border-gray-200">
+    <h2 class="text-lg font-semibold text-gray-900 mb-3">Contact</h2>
+    <p class="text-gray-700 text-sm">
+      Email: <a href="mailto:wsotthivej@gmail.com" class="underline">wsotthivej@gmail.com</a><br>
+      GitHub: <a href="https://github.com/theajs87" class="underline">github.com/theajs87</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/theasotthivej/" class="underline">linkedin.com/in/theasotthivej/</a>
+    </p>
+  </section>
+
+  <footer class="max-w-3xl mx-auto px-4 py-8 text-xs text-gray-400 border-t border-gray-200">
+    &copy; 2026 Thea Sotthivej. Built with Tailwind CSS, hosted on GitHub Pages.
+  </footer>
+
 </body>
 </html>
